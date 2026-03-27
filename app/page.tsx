@@ -1,3 +1,15 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+
+const PREGUNTAS = [
+  { id: 'nombre', texto: '¿Cómo te llamas?', tipo: 'texto', placeholder: 'Tu nombre...' },
+  { id: 'personalidad', texto: '¿Cómo te describirías?', tipo: 'opciones', ops: ['Soñador y creativo', 'Práctico y resolutivo', 'Espiritual y reflexivo', 'Curioso y aventurero'] },
+  { id: 'busqueda', texto: '¿Qué es lo que más buscas en la vida?', tipo: 'opciones', ops: ['Calma y equilibrio', 'Crecimiento personal', 'Conexión con los demás', 'Propósito y sentido'] },
+  { id: 'momento', texto: '¿Qué frase describe mejor tu momento vital?', tipo: 'opciones', ops: ['Estoy construyendo algo nuevo', 'Estoy sanando y soltando', 'Estoy buscando mi camino', 'Estoy disfrutando lo que tengo'] },
+  { id: 'tono', texto: '¿Qué tono de mensaje te resuena más?', tipo: 'opciones', ops: ['Poético y metafórico', 'Directo y claro', 'Filosófico y profundo', 'Cálido y cercano'] },
+]
+
 const MENSAJES: Record<string, string[]> = {
   'calma-sanando': [
     'Soltar también es una decisión. Y a veces, la más difícil.',
@@ -180,18 +192,6 @@ const MENSAJES: Record<string, string[]> = {
     'Buscar tranquilo permite ver lo que la ansiedad ciega.',
     'No toda duda es señal de estar perdido.',
     'La búsqueda sin prisa llega más lejos.',
-    'No necesitas certeza total para tomar la siguiente decisión.',
-    'Buscar desde la calma es buscar desde el poder.',
-    'No toda búsqueda es lineal. Los rodeos también enseñan.',
-    'La tranquilidad mientras buscas es también una respuesta.',
-    'No tienes que encontrarlo todo solo.',
-    'Buscar con calma es también confiar en ti.',
-    'No toda incertidumbre dura. La mayoría se resuelve sola.',
-    'La búsqueda paciente encuentra lo que la urgente pierde.',
-    'No te midas por lo rápido que encuentras. Mídete por lo que encuentras.',
-    'Buscar bien es también saber qué no buscar.',
-    'No toda pausa en la búsqueda es retroceso.',
-    'La calma no frena la búsqueda. La mejora.',
   ],
   'calma-disfrutando': [
     'Esto que tienes ahora es suficiente. ¿Lo estás viendo?',
@@ -244,18 +244,6 @@ const MENSAJES: Record<string, string[]> = {
     'No todo momento tranquilo hay que llenarlo.',
     'Lo que ya tienes también merece tu atención.',
     'No necesitas más para empezar a disfrutar. Puedes empezar ahora.',
-    'Disfrutar el presente no cierra el futuro. Lo alimenta.',
-    'No toda satisfacción viene de lograr más.',
-    'La calma sostenida es un indicador de que algo estás haciendo bien.',
-    'No tienes que irte a ningún lado para estar bien. Ya estás.',
-    'Disfrutar también es productivo.',
-    'No todo bienestar necesita ser grande para ser real.',
-    'La paz cotidiana vale más que los picos de felicidad.',
-    'No necesitas más para estar agradecido. Ya tienes suficiente.',
-    'Disfrutar sin prisa es también una forma de vivir mejor.',
-    'No toda calma es temporal. Puedes quedarte aquí.',
-    'Lo que disfrutas hoy también te define.',
-    'No tienes que esperar a merecer el descanso. Ya lo mereces.',
   ],
   'crecimiento-construyendo': [
     'Cada decisión que tomas hoy es arquitectura de lo que serás.',
@@ -308,18 +296,6 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que hacer todo perfecto para crecer. Solo tienes que hacer.',
     'Construir con propósito claro es construir con ventaja.',
     'No todo lo que construyes tiene que gustar a todos.',
-    'El crecimiento no espera al momento perfecto.',
-    'No tienes que tener más recursos para empezar. Empieza con lo que tienes.',
-    'Construir algo propio, aunque sea pequeño, tiene un valor único.',
-    'No toda velocidad es progreso. A veces ir más lento es ir mejor.',
-    'El crecimiento también se mide en lo que ya no te afecta.',
-    'No tienes que construir lo mismo que los demás para llegar lejos.',
-    'Cada día que construyes algo es un día que no desperdiciaste.',
-    'No todo lo que construyes saldrá como planeaste. Eso también es información.',
-    'El crecimiento requiere también honestidad sobre dónde estás.',
-    'No tienes que llegar lejos de golpe. Solo tienes que no parar.',
-    'Construir desde la claridad es más efectivo que construir desde la urgencia.',
-    'No todo lo que construyes hoy lo verás mañana. Pero lo verás.',
   ],
   'crecimiento-sanando': [
     'Sanar no es volver a ser quien eras. Es convertirte en quien puedes ser.',
@@ -372,18 +348,6 @@ const MENSAJES: Record<string, string[]> = {
     'Lo que te costó llegar hasta aquí también es mérito.',
     'No todo crecimiento viene acompañado de celebración.',
     'Sanar también es soltar la versión de ti que ya no necesitas.',
-    'No tienes que esperar a estar completamente bien para empezar a crecer.',
-    'Lo que aprendiste sobre ti en los momentos difíciles vale mucho.',
-    'No todo lo que se rompe queda roto para siempre.',
-    'Sanar también es aprender a pedirte menos perfección.',
-    'No tienes que tener todo bajo control para estar creciendo.',
-    'Lo que hoy sientes como limitación mañana puede ser profundidad.',
-    'No todo proceso de sanación es igual. El tuyo es tuyo.',
-    'Sanar también requiere creer que hay algo al otro lado.',
-    'No tienes que saber adónde vas para saber que estás avanzando.',
-    'Lo que superaste cambió permanentemente quién eres.',
-    'No todo crecimiento llega en los momentos que eliges.',
-    'Sanar también es aprender que mereces estar bien.',
   ],
   'crecimiento-buscando': [
     'Buscar ya es moverse. Y moverse ya es crecer.',
@@ -436,18 +400,6 @@ const MENSAJES: Record<string, string[]> = {
     'Buscar activamente es diferente a estar insatisfecho.',
     'No toda búsqueda exterior es realmente exterior.',
     'La exploración también requiere soltar lo que ya no sirve.',
-    'No tienes que encontrar para haber buscado bien.',
-    'Buscar con determinación es ya una forma de crecer.',
-    'No toda búsqueda necesita audiencia.',
-    'La incertidumbre de buscar es mejor que la certeza de no intentarlo.',
-    'No tienes que justificar por qué sigues buscando.',
-    'Buscar también te da información sobre ti.',
-    'No toda búsqueda termina en respuesta. Algunas terminan en claridad.',
-    'La búsqueda sin miedo abre puertas que el miedo mantiene cerradas.',
-    'No tienes que tener todo resuelto para seguir explorando.',
-    'Buscar bien es también saber cuándo parar y evaluar.',
-    'No toda búsqueda es sobre encontrar. Algunas son sobre descartarse.',
-    'La exploración activa genera más oportunidades que la espera pasiva.',
   ],
   'crecimiento-disfrutando': [
     'Celebrar lo que ya tienes no frena el crecimiento. Lo alimenta.',
@@ -500,18 +452,6 @@ const MENSAJES: Record<string, string[]> = {
     'Disfrutar el presente también es confiar en el futuro.',
     'No tienes que llegar a ningún lado especial para estar bien ahora.',
     'Lo que disfrutas hoy también es lo que recuerdas mañana.',
-    'No toda alegría necesita justificación.',
-    'Disfrutar también requiere atención. No se da solo.',
-    'No tienes que posponer la vida en nombre del crecimiento.',
-    'Lo que ya eres ya vale. Lo que serás también.',
-    'No toda satisfacción es señal de que ya terminaste.',
-    'Disfrutar también es estrategia.',
-    'No tienes que ser otra persona para disfrutar más.',
-    'Lo que celebras hoy también define quién eres.',
-    'No toda alegría viene del logro. Algunas vienen del camino.',
-    'Disfrutar también es parte del crecimiento.',
-    'No tienes que esperar a merecer el disfrute. Ya lo mereces.',
-    'Lo que tienes ahora también es suficiente para estar bien.',
   ],
   'conexion-construyendo': [
     'Lo que construyes con otros tiene más peso que lo que construyes solo.',
@@ -545,7 +485,6 @@ const MENSAJES: Record<string, string[]> = {
     'Construir con personas que te desafían es construir mejor.',
     'No tienes que proteger cada idea. Compartir también construye.',
     'Las relaciones también se construyen. No aparecen solas.',
-    'No todo lo que construyes en solitario tiene la profundidad de lo construido en comunidad.',
     'Construir también es saber a quién llamar.',
     'No tienes que tener todo resuelto antes de involucrar a otros.',
     'Las personas que creen en lo que construyes también lo hacen crecer.',
@@ -553,17 +492,18 @@ const MENSAJES: Record<string, string[]> = {
     'Construir en comunidad genera más que construir en aislamiento.',
     'No tienes que ser el único con la visión para que la visión avance.',
     'Las conexiones que cuidas también te cuidan.',
-    'No todo lo que construyes necesita audiencia. Pero algunas cosas sí.',
     'Construir con otros también te enseña sobre ti.',
     'No tienes que hacer todo para merecer lo que construyes.',
     'Las personas correctas a tu lado cambian lo que es posible.',
     'No toda colaboración es igual. Elige bien con quién construyes.',
     'Construir relaciones también requiere inversión constante.',
-    'No tienes que ir más rápido que los demás. Tienes que ir en la dirección correcta.',
     'Las conexiones que nutres también nutren lo que construyes.',
-    'No toda soledad en el proceso es señal de que algo va mal.',
     'Construir con personas que complementan lo que no tienes es inteligencia.',
     'No tienes que hacerlo perfecto para que quienes construyen contigo lo valoren.',
+    'Las personas que aparecen en tu camino también son parte de lo que construyes.',
+    'No toda soledad en el proceso es señal de que algo va mal.',
+    'Construir también requiere saber a quién dejar entrar.',
+    'Las mejores construcciones tienen historia de colaboración detrás.',
   ],
   'conexion-sanando': [
     'Dejarte ayudar también es un acto de valentía.',
@@ -599,23 +539,23 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también es aprender qué personas te hacen bien.',
     'No tienes que justificar tu necesidad de apoyo.',
     'Las conversaciones que curan también son actos de amor.',
-    'No toda conexión que buscas cuando estás mal es dependencia.',
     'Sanar también es confiar en que hay personas que quieren ayudarte.',
     'No tienes que haber perdido mucho para merecer apoyo.',
     'Las relaciones sanas también se construyen desde la vulnerabilidad.',
-    'No toda apertura implica riesgo. Algunas implican alivio.',
     'Sanar en comunidad es más sostenible que sanar en solitario.',
     'No tienes que esperar a estar bien para conectar con quien te cuida.',
     'Las personas que te ven sanar también crecen contigo.',
-    'No toda dependencia emocional es mala. Algunas son necesarias.',
     'Sanar también es redescubrir que no estás solo.',
     'No tienes que resolver todo antes de pedir ayuda.',
     'Las conexiones que nutres en momentos buenos también están cuando los necesitas.',
-    'No toda apertura tiene que ser total. Puedes elegir cuánto compartir.',
     'Sanar también es aprender a confiar de nuevo.',
     'No tienes que cargar con todo para demostrar que puedes.',
     'Las personas correctas a tu lado hacen que el proceso duela menos.',
     'No toda conexión que buscas en momentos difíciles es debilidad.',
+    'Sanar también es permitirte ser visto sin filtros.',
+    'No tienes que estar entero para conectar con alguien.',
+    'Las personas que te aceptan en proceso también son las que importan.',
+    'Sanar también pasa por reconocer quién está contigo de verdad.',
   ],
   'conexion-buscando': [
     'A veces lo que buscas ya está en una conversación que aún no tuviste.',
@@ -627,47 +567,47 @@ const MENSAJES: Record<string, string[]> = {
     'Las personas correctas también te ayudan a encontrar lo que buscas.',
     'No tienes que saber exactamente qué buscas para conectar.',
     'Buscar con otros multiplica las perspectivas.',
-    'No toda conexión que buscas es romántica. Algunas son las más importantes.',
     'Las conversaciones correctas también revelan lo que buscas.',
     'No tienes que encontrar solo para que el hallazgo sea tuyo.',
     'Buscar también es estar abierto a lo que llega.',
-    'No toda conexión hay que forzarla. Las correctas llegan.',
     'Las personas con las que conectas también definen lo que encuentras.',
     'No tienes que buscar en soledad lo que otros también están buscando.',
     'Buscar conexión también es buscar crecimiento.',
-    'No toda búsqueda tiene que ser interior.',
     'Las relaciones que buscas también te están buscando.',
-    'No tienes que tener todo resuelto para conectar.',
     'Buscar con apertura genera más que buscar con esquemas rígidos.',
-    'No toda conexión que te mueve es la que esperabas.',
     'Las personas que aparecen en tu búsqueda también son parte del hallazgo.',
     'No tienes que saber exactamente qué buscas para reconocerlo cuando llegue.',
     'Buscar también requiere estar dispuesto a ser encontrado.',
-    'No toda búsqueda de conexión necesita estrategia.',
     'Las conversaciones inesperadas también revelan lo que buscas.',
     'No tienes que buscar lejos lo que puede estar cerca.',
     'Buscar con los demás también te muestra quién eres.',
-    'No toda conexión que buscas tiene que durar para ser valiosa.',
     'Las personas correctas también aparecen cuando estás en movimiento.',
     'No tienes que estar solo en la búsqueda.',
     'Buscar con apertura a las personas también es buscar con inteligencia.',
     'No toda conexión se encuentra. Algunas se construyen.',
     'Las relaciones que buscas también se alimentan de lo que das.',
-    'No tienes que saber exactamente qué tipo de conexión buscas.',
     'Buscar también es estar presente en los lugares correctos.',
-    'No toda búsqueda de conexión es necesidad. Algunas son sabiduría.',
     'Las personas que te encuentran cuando buscas también tienen algo que enseñarte.',
     'No tienes que buscar solo para encontrar algo que sea tuyo.',
     'Buscar conexión también es declarar que crees en los demás.',
-    'No toda conexión que buscas llega en el momento que esperas.',
     'Las conversaciones que buscas también te cambian.',
-    'No tienes que tener algo que ofrecer para buscar conexión.',
     'Buscar también implica estar dispuesto a que te sorprendan.',
-    'No toda búsqueda de conexión termina en lo que esperabas. A veces termina mejor.',
     'Las personas que aparecen cuando buscas no siempre son las que buscabas.',
     'No tienes que saber adónde vas para conectar con quien va en tu dirección.',
     'Buscar también es una forma de confiar en que hay algo que encontrar.',
     'No toda conexión que buscas está en los lugares que conoces.',
+    'Buscar con otros también te hace más visible para lo que buscas.',
+    'Las personas que conectan contigo cuando buscas también buscan algo.',
+    'No tienes que tener todo claro para buscar conexión.',
+    'Buscar con otros también multiplica lo que puedes encontrar.',
+    'Las conversaciones que no planeas también son parte de la búsqueda.',
+    'No toda búsqueda de conexión es necesidad. Algunas son sabiduría.',
+    'Buscar junto a otros también acelera lo que encuentras.',
+    'Las personas que te rodean también son parte de lo que buscas.',
+    'No tienes que buscar en silencio si hay alguien que puede ayudarte.',
+    'Buscar también es confiar en que lo que encuentres valdrá la pena.',
+    'Las conexiones que haces mientras buscas también son hallazgos.',
+    'No toda búsqueda solitaria es la más efectiva.',
   ],
   'conexion-disfrutando': [
     'Los momentos con las personas correctas no se recuperan. Están ahora.',
@@ -677,49 +617,49 @@ const MENSAJES: Record<string, string[]> = {
     'Hoy, solo por esto, ya fue un buen día.',
     'No toda felicidad es solitaria. Las mejores suelen ser compartidas.',
     'Las personas que te hacen bien también merecen tu presencia real.',
-    'No tienes que hacer nada especial para disfrutar con quien quieres.',
     'Los momentos ordinarios con personas extraordinarias son los que más recuerdas.',
     'No toda celebración necesita ser grande.',
     'Disfrutar con otros también es un acto de generosidad.',
-    'No tienes que estar en ningún lado especial para estar bien con quien quieres.',
     'Las risas compartidas también son infraestructura de las relaciones.',
-    'No toda conexión que disfrutas necesita propósito.',
     'Disfrutar de las personas que tienes también es gratitud.',
     'No tienes que esperar a una ocasión especial para estar presente.',
     'Los momentos con quienes quieres también te definen.',
-    'No toda alegría compartida necesita ser celebrada en voz alta.',
     'Disfrutar con otros también te recuerda quién eres.',
     'No tienes que planificar los mejores momentos. Algunos solo pasan.',
     'Las personas que te alegran también merecen saber que lo hacen.',
-    'No toda conexión que disfrutas necesita análisis.',
     'Disfrutar de las personas que tienes es también cuidarlas.',
     'No tienes que esperar a tener tiempo para estar presente.',
     'Los momentos de conexión real también recargan.',
-    'No toda alegría compartida es casual. Algunas se construyen.',
     'Disfrutar con quien quieres también es una elección.',
     'No tienes que tener todo resuelto para disfrutar de quien tienes.',
     'Las conversaciones que te hacen bien también son combustible.',
-    'No toda conexión que disfrutas tiene que durar para importar.',
     'Disfrutar del presente con quien importa es también futuro.',
-    'No tienes que ir a ningún lado especial para tener los mejores momentos.',
     'Las personas con las que ríes también te cuidan sin que lo notes.',
-    'No toda alegría compartida necesita ser recordada para haber valido.',
     'Disfrutar de lo que tienes, con quien tienes, es suficiente.',
     'No tienes que esperar a que todo esté bien para estar bien con quien quieres.',
     'Los momentos de conexión real compensan muchos momentos difíciles.',
-    'No toda celebración necesita motivo externo.',
     'Disfrutar con otros también te recuerda que no estás solo.',
-    'No tienes que tener todo bajo control para disfrutar de quien tienes.',
     'Las personas que disfrutas también merecen tu atención real.',
-    'No toda conexión que valoras hay que decirla en voz alta. Pero a veces sí.',
     'Disfrutar también es estar disponible para quienes quieres.',
-    'No tienes que ganarte los momentos de alegría compartida.',
     'Las conexiones que cuidas también son las que más disfrutas.',
-    'No toda alegría con otros necesita ser perfecta para ser real.',
     'Disfrutar de las personas que tienes también es invertir en ti.',
     'No tienes que tener mucho para disfrutar mucho con quien quieres.',
     'Los momentos sencillos con personas reales son los más valiosos.',
-    'No toda conexión que disfrutas necesita futuro para tener valor hoy.',
+    'No toda alegría compartida necesita futuro para tener valor hoy.',
+    'Disfrutar con quien quieres también es una forma de agradecerles.',
+    'Los mejores momentos raramente se planifican. Se reconocen.',
+    'Disfrutar juntos también construye.',
+    'No toda conexión que disfrutas necesita palabras.',
+    'Las personas que te hacen sentir bien también merecen que se lo digas.',
+    'Disfrutar también es elegir con quién pasas el tiempo.',
+    'No todo momento con otros necesita propósito para tener valor.',
+    'Las conexiones que celebras también se fortalecen.',
+    'Disfrutar con otros también es una forma de cuidar esas relaciones.',
+    'No toda alegría compartida hay que guardarla. Algunas hay que expresarlas.',
+    'Las personas que te acompañan en los momentos buenos también importan.',
+    'Disfrutar del presente con quien quieres también es una decisión.',
+    'No tienes que ir a ningún lado especial para tener los mejores momentos.',
+    'Las conexiones reales también se disfrutan en lo cotidiano.',
   ],
   'proposito-construyendo': [
     'Lo que haces tiene sentido aunque todavía no veas el cuadro completo.',
@@ -731,47 +671,47 @@ const MENSAJES: Record<string, string[]> = {
     'El por qué detrás de lo que construyes también es parte del resultado.',
     'No tienes que ver el final para saber que vale la pena construir.',
     'Construir con sentido también atrae a las personas correctas.',
-    'No toda acción con propósito necesita ser grande para importar.',
     'El propósito claro también actúa como filtro de lo que no merece tu energía.',
     'No tienes que explicarle a todos por qué construyes lo que construyes.',
     'Construir algo con sentido también te sostiene cuando es difícil.',
-    'No toda dificultad en lo que construyes significa que vas mal.',
     'El propósito también se prueba en los momentos difíciles.',
     'No tienes que tener el propósito completamente definido para empezar.',
     'Construir desde el para qué es más sostenible que construir desde el qué.',
-    'No toda construcción con propósito necesita audiencia para tener valor.',
     'El sentido de lo que haces también afecta cómo lo haces.',
     'No tienes que convencer a todos de tu propósito para que sea válido.',
     'Construir con intención también genera más energía que construir por inercia.',
-    'No toda claridad de propósito llega antes de empezar. Algunas llega mientras.',
     'El propósito también se refina con el tiempo y la experiencia.',
     'No tienes que tener certeza total sobre tu propósito para actuar.',
     'Construir también es descubrir para qué sirve lo que estás construyendo.',
-    'No toda duda sobre el propósito es señal de que está equivocado.',
     'El sentido que le das a lo que construyes también lo hace más sólido.',
-    'No tienes que tener el propósito perfecto para empezar a construir.',
     'Construir con propósito también requiere revisar si el propósito sigue siendo tuyo.',
-    'No toda construcción con sentido es visible para los demás.',
     'El propósito también se construye haciendo.',
-    'No tienes que esperar a tener todo el propósito claro para construir.',
     'Construir desde el sentido también genera más resistencia ante los obstáculos.',
-    'No toda dificultad en el camino de lo que construyes invalida el propósito.',
     'El propósito también cambia. Y está bien.',
-    'No tienes que tener el mismo propósito para siempre.',
     'Construir con sentido también es construir con identidad.',
-    'No toda acción con propósito tiene que ser perfecta.',
     'El para qué de lo que construyes también es parte de la estrategia.',
     'No tienes que justificar tu propósito ante nadie.',
     'Construir también es descubrir qué te importa realmente.',
-    'No toda construcción tiene sentido desde el inicio. Algunas lo van encontrando.',
     'El propósito sostenido también requiere revisiones periódicas.',
-    'No tienes que tener el propósito más grande del mundo para que valga.',
     'Construir con sentido también requiere coraje para no desviarte.',
-    'No toda claridad de propósito es permanente. Se trabaja.',
     'El sentido de lo que construyes también define cómo lo construyes.',
     'No tienes que tener todo claro para saber que lo que haces importa.',
     'Construir con propósito es también construir con honestidad.',
     'No todo lo que construyes tiene que tener impacto masivo para tener sentido.',
+    'El propósito claro hace más fácil decir que no a lo que no encaja.',
+    'Construir con sentido también te da más energía para los días difíciles.',
+    'No toda construcción con propósito es visible desde fuera.',
+    'El sentido también se encuentra en el proceso, no solo en el resultado.',
+    'Construir con propósito también requiere honestidad sobre lo que realmente quieres.',
+    'No tienes que tener el propósito más original para que sea valioso.',
+    'El propósito también se fortalece cada vez que actúas en coherencia con él.',
+    'Construir con sentido también es más sostenible a largo plazo.',
+    'No toda dificultad en el camino invalida el propósito.',
+    'El propósito también requiere ser revisado cuando las circunstancias cambian.',
+    'Construir con intención también genera más satisfacción en el proceso.',
+    'No tienes que tener el propósito perfecto para empezar a construir con sentido.',
+    'El para qué también es lo que te sostiene cuando el cómo se complica.',
+    'Construir con propósito claro también te hace más resiliente.',
   ],
   'proposito-sanando': [
     'Lo que viviste no fue en vano si lo conviertes en dirección.',
@@ -783,47 +723,47 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también revela para qué estás aquí.',
     'No toda herida bloquea el propósito. Algunas lo definen.',
     'Lo que superaste también es parte de tu capacidad única.',
-    'No tienes que haber tenido un camino fácil para tener un propósito poderoso.',
     'Sanar también es recuperar la conexión con lo que te importa.',
     'No toda pérdida te aleja del propósito. Algunas te acercan.',
     'Lo que viviste también amplió tu capacidad de ayudar a otros.',
     'No tienes que estar completamente bien para empezar a vivir con propósito.',
     'Sanar también es recuperar la energía para lo que importa.',
-    'No toda dificultad pasada es un obstáculo para el propósito futuro.',
     'Lo que te costó llegar hasta aquí también es parte de tu propósito.',
-    'No tienes que tener todo sanado para empezar a construir sentido.',
     'Sanar también es descubrir que tienes algo que ofrecer.',
     'No toda herida bloquea. Algunas son el origen de tu mayor contribución.',
     'Lo que viviste también te dio perspectiva que otros no tienen.',
-    'No tienes que haber superado todo para empezar a vivir con intención.',
     'Sanar también es encontrar el para qué de lo que pasó.',
-    'No toda experiencia difícil carece de sentido.',
     'Lo que has superado también es evidencia de tu capacidad.',
-    'No tienes que esperar a estar bien del todo para empezar a vivir con propósito.',
     'Sanar también es recuperar la confianza en lo que puedes hacer.',
-    'No toda herida necesita explicación para generar propósito.',
     'Lo que viviste también es parte de lo que te hace único.',
-    'No tienes que haber tenido un origen fácil para tener un destino significativo.',
-    'Sanar también es redescubrir qué te mueve.',
-    'No toda dificultad pasada te define negativamente.',
     'Lo que superaste también es la base de lo que puedes construir.',
-    'No tienes que convertir todo el dolor en propósito. Pero puedes elegir.',
     'Sanar también es recuperar el sentido de lo cotidiano.',
-    'No toda herida necesita ser transformada para poder seguir.',
-    'Lo que viviste también te dio herramientas que otros no tienen.',
-    'No tienes que esperar a entender todo lo que pasó para avanzar.',
-    'Sanar también es reconectar con lo que quieres construir.',
-    'No toda experiencia difícil bloquea el propósito. Algunas lo clarifican.',
     'Lo que has pasado también ha construido quién eres hoy.',
-    'No tienes que haber tenido todo fácil para tener un propósito claro.',
     'Sanar también es recuperar la capacidad de imaginar lo que viene.',
-    'No toda herida necesita ser el centro de tu historia.',
     'Lo que viviste también puede ser la razón por la que algo que haces importa.',
-    'No tienes que haber superado todo para empezar a construir algo con sentido.',
     'Sanar también es descubrir que el dolor también puede tener dirección.',
-    'No toda experiencia difícil necesita justificación para tener valor.',
     'Lo que has superado también es evidencia de que puedes superar lo que viene.',
-    'No tienes que convertir tu historia en narrativa pública para encontrar propósito en ella.',
+    'Sanar con propósito es convertir la experiencia en recurso.',
+    'No tienes que convertir todo el dolor en propósito. Pero puedes elegir.',
+    'Sanar también es reconectar con lo que quieres construir.',
+    'Lo que viviste también te dio herramientas que otros no tienen.',
+    'Sanar también es recuperar la capacidad de confiar en el futuro.',
+    'No tienes que tener todo sanado para empezar a construir sentido.',
+    'Lo que superaste cambió permanentemente quién eres.',
+    'Sanar también pasa por reconocer el valor de lo que ya recorriste.',
+    'No toda herida necesita ser el centro de tu historia.',
+    'Lo que viviste también puede ser combustible, no solo peso.',
+    'Sanar también es aprender que mereces estar bien y hacer algo con ello.',
+    'No tienes que esperar a estar completamente bien para empezar.',
+    'Lo que te costó también te enseñó lo que vale la pena.',
+    'Sanar también es encontrar qué quieres proteger a partir de ahora.',
+    'No toda experiencia difícil carece de sentido.',
+    'Lo que has superado también define lo que puedes ofrecer.',
+    'Sanar también es redescubrir qué te mueve de verdad.',
+    'No tienes que haber tenido un origen fácil para tener un destino significativo.',
+    'Lo que viviste también amplió tu capacidad de entender lo esencial.',
+    'Sanar también es recuperar las ganas de construir algo.',
+    'No toda herida necesita explicación para generar propósito.',
   ],
   'proposito-buscando': [
     'El propósito no siempre llega claro. A veces es solo una dirección.',
@@ -833,49 +773,49 @@ const MENSAJES: Record<string, string[]> = {
     'Estás más cerca de lo que crees. Presta atención.',
     'No toda búsqueda de propósito termina en revelación. A veces termina en claridad gradual.',
     'Buscar el para qué también es honrarte.',
-    'No tienes que encontrar el propósito de golpe.',
     'La búsqueda de sentido también te cambia mientras buscas.',
-    'No toda incertidumbre sobre el propósito es vacío. Algunas es espacio.',
     'Buscar el propósito con honestidad es ya una forma de vivir con intención.',
-    'No tienes que tener el propósito más grande para que tu búsqueda sea válida.',
     'La búsqueda de sentido también te muestra qué no es para ti.',
-    'No toda pregunta sobre el propósito tiene respuesta rápida.',
     'Buscar el para qué también requiere escucharte.',
-    'No tienes que saber exactamente qué buscas para saber que vale la pena buscarlo.',
     'La búsqueda de propósito también es una búsqueda de ti.',
     'No toda claridad de propósito llega antes de actuar. Algunas llega actuando.',
     'Buscar el sentido también requiere tolerar la incertidumbre.',
-    'No tienes que justificar tu búsqueda de propósito.',
     'La búsqueda honesta de sentido también genera respeto propio.',
-    'No toda búsqueda de propósito necesita testigos.',
     'Buscar el para qué también es lo que diferencia una vida elegida de una vivida por inercia.',
-    'No tienes que tener todo claro para empezar a buscar con intención.',
     'La búsqueda de sentido también requiere soltar lo que no es tuyo.',
-    'No toda duda sobre el propósito es señal de que vas mal.',
     'Buscar el para qué también implica revisar qué ya no tiene sentido.',
-    'No tienes que saber el destino para saber qué dirección tiene más sentido.',
     'La búsqueda de propósito también te enseña sobre lo que valoras.',
-    'No toda búsqueda de sentido es existencial. Algunas son cotidianas.',
     'Buscar también es descartar. Y descartar también es avanzar.',
     'No tienes que tener el propósito definitivo para vivir con más intención hoy.',
     'La búsqueda de sentido también requiere honestidad sobre qué te mueve realmente.',
-    'No toda claridad de propósito es permanente. Evoluciona.',
     'Buscar el para qué también requiere paciencia con uno mismo.',
     'No tienes que encontrar el propósito de vida para vivir con propósito hoy.',
     'La búsqueda de sentido también es una forma de respetarte.',
-    'No toda búsqueda de propósito es solitaria.',
     'Buscar el para qué también requiere estar dispuesto a cambiar.',
-    'No tienes que tener todo bajo control para buscar propósito.',
     'La búsqueda de sentido también genera energía cuando la encuentras.',
-    'No toda búsqueda de propósito necesita ser dramática.',
     'Buscar el para qué también te ayuda a tomar mejores decisiones.',
-    'No tienes que haber perdido el propósito para buscarlo.',
-    'La búsqueda de sentido también te hace más claro en lo que priorizas.',
-    'No toda búsqueda de propósito termina donde esperabas.',
-    'Buscar el para qué también requiere soltar lo que ya no encaja.',
-    'No tienes que tener el propósito perfecto para empezar a actuar con sentido.',
     'La búsqueda de propósito también es una declaración de que te importas.',
     'No toda búsqueda de sentido necesita un final claro para tener valor.',
+    'Buscar el propósito también requiere soltar el que ya no encaja.',
+    'La búsqueda de sentido también te hace más claro en lo que priorizas.',
+    'No tienes que tener el propósito perfecto para empezar a actuar con sentido.',
+    'Buscar también requiere saber qué no vale la pena buscar.',
+    'La búsqueda de propósito también requiere revisar qué das por hecho.',
+    'No toda duda sobre el propósito es señal de que vas mal.',
+    'Buscar el para qué con honestidad también requiere valentía.',
+    'La búsqueda consciente de sentido también te da más claridad en lo cotidiano.',
+    'No tienes que saber el destino para saber qué dirección tiene más sentido.',
+    'Buscar propósito también es buscar coherencia entre lo que haces y lo que valoras.',
+    'La búsqueda de sentido también requiere tiempo sin ruido.',
+    'No toda búsqueda de propósito necesita dramatismo.',
+    'Buscar el para qué también requiere escuchar lo que no te atreves a decirte.',
+    'La búsqueda de propósito también te conecta con lo esencial.',
+    'No tienes que tener todo bajo control para buscar propósito.',
+    'Buscar sentido también requiere confiar en que hay algo que encontrar.',
+    'La búsqueda honesta de propósito también genera movimiento.',
+    'No toda incertidumbre sobre el propósito es vacío. Algunas es espacio.',
+    'Buscar el para qué también es lo más humano que puedes hacer.',
+    'La búsqueda de propósito también te revela quién quieres ser.',
   ],
   'proposito-disfrutando': [
     'Vivir bien también es un propósito. No lo subestimes.',
@@ -885,49 +825,49 @@ const MENSAJES: Record<string, string[]> = {
     'Hoy tienes todo lo que necesitas para vivir con intención.',
     'No toda vida con propósito es dramática. Algunas son tranquilas y plenas.',
     'Disfrutar de lo que tienes con intención también es propósito.',
-    'No tienes que buscar el gran propósito si ya vives con sentido.',
     'El propósito también puede ser disfrutar plenamente lo que ya tienes.',
-    'No toda vida con propósito requiere sacrificio constante.',
     'Disfrutar con consciencia también es vivir con propósito.',
-    'No tienes que tener el propósito más visible para que sea real.',
     'El sentido también se encuentra en lo cotidiano bien vivido.',
-    'No toda vida con sentido necesita ser contada.',
     'Disfrutar de lo que construiste también es parte del propósito.',
-    'No tienes que buscar más propósito si ya estás viviendo con el tuyo.',
     'El propósito también puede ser vivir bien y con plenitud.',
-    'No toda vida con propósito necesita impacto masivo.',
     'Disfrutar del presente con intención también es vivir con propósito.',
-    'No tienes que estar siempre construyendo para vivir con sentido.',
     'El propósito también se expresa en cómo disfrutas lo que tienes.',
-    'No toda vida con propósito es visible desde fuera.',
     'Disfrutar de lo que eres y de lo que tienes también es intencional.',
-    'No tienes que justificar que tu propósito sea vivir bien.',
     'El sentido también puede estar en la calidad de lo cotidiano.',
-    'No toda vida con propósito necesita urgencia.',
     'Disfrutar con consciencia también genera sentido.',
-    'No tienes que tener el propósito más grande para vivir con intención.',
     'El propósito también puede ser simple y profundo a la vez.',
-    'No toda vida con sentido requiere ruido externo.',
     'Disfrutar plenamente también es una forma de agradecer.',
-    'No tienes que estar siempre en modo misión para vivir con propósito.',
     'El sentido también vive en los momentos que decides valorar.',
-    'No toda vida con propósito necesita validación.',
     'Disfrutar de lo que has construido también tiene sentido.',
-    'No tienes que tener un propósito distinto al de vivir bien y plenamente.',
     'El propósito también se expresa en la calidad de tu presencia.',
-    'No toda vida con sentido necesita ser complicada.',
     'Disfrutar también es un acto de propósito cuando es consciente.',
-    'No tienes que buscar el gran sentido si el pequeño ya te llena.',
     'El propósito también puede ser estar bien y hacer que otros estén bien.',
-    'No toda vida con propósito necesita cambiar el mundo.',
     'Disfrutar de lo que tienes con plena consciencia también es propósito.',
-    'No tienes que esperar a encontrar el gran propósito para vivir con intención.',
     'El sentido también está en elegir disfrutar lo que ya tienes.',
-    'No toda vida con propósito necesita ser difícil.',
     'Disfrutar plenamente también es una forma de vivir con intención.',
-    'No tienes que tener el propósito más ambicioso para que sea válido.',
     'El propósito también puede ser crear momentos de alegría y conexión.',
     'No toda vida con sentido es heroica. Algunas son simplemente plenas.',
+    'Disfrutar también requiere atención. No se da solo.',
+    'El propósito también vive en cómo tratas lo que ya tienes.',
+    'Disfrutar bien lo que hay también es una habilidad.',
+    'No toda vida con propósito necesita cambiar el mundo.',
+    'El sentido también puede ser pequeño y cotidiano y completamente tuyo.',
+    'Disfrutar de la vida que has construido también es honrarla.',
+    'No tienes que buscar más propósito si ya vives con el tuyo.',
+    'El propósito también se encuentra en elegir bien cómo disfrutas.',
+    'Disfrutar también es una forma de decir que esto vale la pena.',
+    'No toda vida con propósito requiere sacrificio constante.',
+    'El sentido también está en lo que proteges y cuidas.',
+    'Disfrutar consciente también es vivir alineado con lo que valoras.',
+    'No tienes que estar siempre construyendo para vivir con sentido.',
+    'El propósito también puede ser la calidad de tu presencia con otros.',
+    'Disfrutar también es una señal de que estás en el lugar correcto.',
+    'No toda ambición necesita sacrificar el disfrute.',
+    'El propósito también vive en los momentos que eliges vivir plenamente.',
+    'Disfrutar sin culpa también es coherencia con lo que valoras.',
+    'No tienes que esperar a merecer el disfrute si ya vives con intención.',
+    'El sentido también se construye en los momentos ordinarios.',
+    'Disfrutar de lo que ya eres también es propósito.',
   ],
   'default': [
     'Tienes más claridad de la que crees. Solo necesitas parar un segundo.',
@@ -951,4 +891,158 @@ const MENSAJES: Record<string, string[]> = {
     'No toda información es útil. Filtra.',
     'El tiempo que dedicas a lo que importa también se nota.',
   ],
+}
+
+function getMensaje(busqueda: string, momento: string): string {
+  const b = busqueda.toLowerCase()
+  const m = momento.toLowerCase()
+  let bKey = 'default'
+  if (b.includes('calma')) bKey = 'calma'
+  else if (b.includes('crecimiento')) bKey = 'crecimiento'
+  else if (b.includes('conexi')) bKey = 'conexion'
+  else if (b.includes('prop')) bKey = 'proposito'
+  let mKey = 'construyendo'
+  if (m.includes('sanando')) mKey = 'sanando'
+  else if (m.includes('buscando')) mKey = 'buscando'
+  else if (m.includes('disfrutando')) mKey = 'disfrutando'
+  const key = `${bKey}-${mKey}`
+  const lista = MENSAJES[key] || MENSAJES['default']
+  return lista[Math.floor(Math.random() * lista.length)]
+}
+
+type Perfil = { nombre: string; personalidad: string; busqueda: string; momento: string; tono: string }
+const STORAGE_KEY = 'ceramica_perfil'
+
+export default function Home() {
+  const [pantalla, setPantalla] = useState<'bienvenida' | 'preguntas' | 'mensaje'>('bienvenida')
+  const [paso, setPaso] = useState(0)
+  const [respuestas, setRespuestas] = useState<Record<string, string[]>>({})
+  const [nombreInput, setNombreInput] = useState('')
+  const [perfil, setPerfil] = useState<Perfil | null>(null)
+  const [mensaje, setMensaje] = useState('')
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const guardado = localStorage.getItem(STORAGE_KEY)
+    if (guardado) {
+      const p = JSON.parse(guardado) as Perfil
+      setPerfil(p)
+      setMensaje(getMensaje(p.busqueda, p.momento))
+      setPantalla('mensaje')
+      setTimeout(() => setVisible(true), 100)
+    }
+  }, [])
+
+  const toggleOpcion = (id: string, op: string) => {
+    setRespuestas(prev => {
+      const actual = prev[id] || []
+      return { ...prev, [id]: actual.includes(op) ? actual.filter(o => o !== op) : [...actual, op] }
+    })
+  }
+
+  const siguiente = () => {
+    const q = PREGUNTAS[paso]
+    if (q.tipo === 'texto' && !nombreInput.trim()) return
+    if (q.tipo === 'opciones' && !(respuestas[q.id]?.length)) return
+    if (paso < PREGUNTAS.length - 1) {
+      setPaso(p => p + 1)
+    } else {
+      const p: Perfil = {
+        nombre: nombreInput,
+        personalidad: (respuestas['personalidad'] || []).join(', '),
+        busqueda: (respuestas['busqueda'] || []).join(', '),
+        momento: (respuestas['momento'] || []).join(', '),
+        tono: (respuestas['tono'] || []).join(', '),
+      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(p))
+      setPerfil(p)
+      setMensaje(getMensaje(p.busqueda, p.momento))
+      setPantalla('mensaje')
+      setTimeout(() => setVisible(true), 100)
+    }
+  }
+
+  const nuevoMensaje = () => {
+    if (!perfil) return
+    setVisible(false)
+    setTimeout(() => { setMensaje(getMensaje(perfil.busqueda, perfil.momento)); setVisible(true) }, 400)
+  }
+
+  const resetear = () => {
+    if (!confirm('¿Seguro que quieres empezar de nuevo?')) return
+    localStorage.removeItem(STORAGE_KEY)
+    setPerfil(null); setPaso(0); setRespuestas({}); setNombreInput(''); setVisible(false)
+    setPantalla('bienvenida')
+  }
+
+  const q = PREGUNTAS[paso]
+
+  return (
+    <main className="min-h-screen flex items-center justify-center bg-[#f5f0ea] px-6 py-10">
+      <div className="w-full max-w-md text-center">
+        {pantalla === 'bienvenida' && (
+          <div className="flex flex-col items-center gap-6">
+            <div className="text-5xl animate-bounce">🏺</div>
+            <h1 className="font-serif-custom text-4xl font-light text-[#3a3028]">Hola.</h1>
+            <p className="text-sm text-[#9a8878] leading-relaxed tracking-wide">
+              Antes de hablarte, quiero conocerte.<br />Unas preguntas. Sin trampa.
+            </p>
+            <button onClick={() => setPantalla('preguntas')}
+              className="mt-2 border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+              Vamos
+            </button>
+          </div>
+        )}
+        {pantalla === 'preguntas' && (
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex gap-2">
+              {PREGUNTAS.map((_, i) => (
+                <div key={i} className={`w-2 h-2 rounded-full transition-all ${i < paso ? 'bg-[#c4ad98]' : 'bg-[#e0d5ca]'}`} />
+              ))}
+            </div>
+            <p className="font-serif-custom text-2xl font-light text-[#3a3028] leading-relaxed min-h-[60px]">{q.texto}</p>
+            {q.tipo === 'texto' ? (
+              <input autoFocus value={nombreInput} onChange={e => setNombreInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && siguiente()} placeholder={q.placeholder}
+                className="w-full border-b border-[#c4ad98] bg-transparent font-serif-custom text-2xl text-[#3a3028] text-center pb-2 outline-none placeholder-[#c4ad98]" />
+            ) : (
+              <div className="flex flex-col gap-3 w-full">
+                {q.ops!.map(op => (
+                  <button key={op} onClick={() => toggleOpcion(q.id, op)}
+                    className={`border px-6 py-3 rounded-full text-sm tracking-wide text-left transition-all ${
+                      (respuestas[q.id] || []).includes(op)
+                        ? 'bg-[#c4ad98] border-[#c4ad98] text-[#f5f0ea]'
+                        : 'border-[#d9cec5] text-[#5a4a3a] hover:bg-[#e8ddd5]'}`}>
+                    {op}
+                  </button>
+                ))}
+              </div>
+            )}
+            <button onClick={siguiente}
+              className="border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+              Continuar
+            </button>
+          </div>
+        )}
+        {pantalla === 'mensaje' && (
+          <div className="flex flex-col items-center gap-6">
+            <div className="text-5xl">🏺</div>
+            <p className="text-xs tracking-widest text-[#9a8878] uppercase">{perfil?.nombre}.</p>
+            <p className={`font-serif-custom text-2xl font-light italic text-[#3a3028] leading-relaxed transition-opacity duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+              {mensaje}
+            </p>
+            <div className="w-10 h-px bg-[#c4ad98]" />
+            <button onClick={nuevoMensaje}
+              className="border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+              Otra
+            </button>
+            <p className="text-xs text-[#c4ad98] tracking-wide mt-4">— Pepper Society</p>
+            <button onClick={resetear} className="text-xs text-[#c4ad98] underline bg-none border-none cursor-pointer">
+              Empezar de nuevo
+            </button>
+          </div>
+        )}
+      </div>
+    </main>
+  )
 }
