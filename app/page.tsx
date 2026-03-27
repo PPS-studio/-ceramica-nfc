@@ -127,19 +127,6 @@ const MENSAJES: Record<string, string[]> = {
     'La claridad de propósito compensa la falta de velocidad.',
     'No tienes que hacer todo a la vez para llegar lejos.',
     'El trabajo bien hecho no necesita ser explicado.',
-    'Construir desde la calma atrae lo correcto.',
-    'No te compares con tu versión de ayer si hoy tienes más contexto.',
-    'La dirección importa más que la velocidad.',
-    'No todo lo que brilla rápido dura.',
-    'Construir con calma es una ventaja competitiva.',
-    'No necesitas presión externa para avanzar si tienes claridad interna.',
-    'El trabajo profundo requiere mente tranquila.',
-    'No todo hay que resolverlo hoy. Pero sí hay que avanzar.',
-    'Construir en silencio y dejar que los resultados hablen.',
-    'La calma productiva es una de las habilidades más valiosas.',
-    'No todo esfuerzo visible es progreso real.',
-    'El ritmo sostenible gana al sprint agotador.',
-    'Construir bien hoy es no tener que rehacer mañana.',
   ],
   'calma-buscando': [
     'A veces la respuesta no llega cuando la buscas. Llega cuando paras.',
@@ -279,10 +266,8 @@ const MENSAJES: Record<string, string[]> = {
     'El crecimiento sin dirección es solo movimiento.',
     'No tienes que esperar a estar listo. Listo es un estado que nunca llega del todo.',
     'Construir algo nuevo siempre empieza con una decisión incómoda.',
-    'No todo lo que ves construir a otros es lo que tú necesitas construir.',
     'El crecimiento real deja evidencia. Búscala.',
     'No tienes que tener el plan completo. Tienes que tener el siguiente paso.',
-    'Construir requiere también saber cuándo parar y revisar.',
     'No todo esfuerzo produce crecimiento. El esfuerzo dirigido, sí.',
     'El crecimiento sostenido requiere hábitos más que motivación.',
     'No te midas por lo que aún no tienes. Mídete por lo que ya has construido.',
@@ -296,6 +281,8 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que hacer todo perfecto para crecer. Solo tienes que hacer.',
     'Construir con propósito claro es construir con ventaja.',
     'No todo lo que construyes tiene que gustar a todos.',
+    'El crecimiento no espera al momento perfecto.',
+    'No tienes que tener más recursos para empezar. Empieza con lo que tienes.',
   ],
   'crecimiento-sanando': [
     'Sanar no es volver a ser quien eras. Es convertirte en quien puedes ser.',
@@ -322,32 +309,32 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar sin prisa es sanar de verdad.',
     'No tienes que demostrar nada mientras te reconstruyes.',
     'Lo que viviste no te define. Lo que haces con ello, sí.',
-    'No todo lo que duele hay que evitarlo. Algunos dolores son necesarios.',
     'Sanar también es elegir qué llevar contigo y qué dejar.',
     'No tienes que ser fuerte todo el tiempo para crecer.',
     'Lo que aprendiste en los momentos difíciles no tiene precio.',
     'No todo crecimiento viene de los éxitos.',
     'Sanar también es reconocer el punto de partida sin juzgarlo.',
-    'No tienes que tener todo resuelto para avanzar.',
     'Lo que superaste ya es parte de tu ventaja.',
     'No todo lo que te rompió te destruyó.',
     'Sanar con propósito es convertir la experiencia en recurso.',
-    'No tienes que entender el porqué para seguir.',
     'Lo que no te mató ya lo procesaste. O lo estás procesando.',
-    'No todo crecimiento es visible desde dentro.',
     'Sanar también requiere paciencia con uno mismo.',
     'No tienes que justificar tu proceso de recuperación.',
     'Lo que hoy parece cicatriz, mañana puede ser distintivo.',
-    'No todo lo que perdiste era necesario para lo que viene.',
     'Sanar también es recuperar la confianza en ti.',
     'No tienes que volver a ser quien eras. Puedes ser más.',
     'Lo que viviste también amplió tu capacidad de entender a otros.',
-    'No todo dolor necesita explicación para ser válido.',
     'Sanar es también redefinir qué significa estar bien.',
-    'No tienes que haber superado todo para crecer.',
     'Lo que te costó llegar hasta aquí también es mérito.',
-    'No todo crecimiento viene acompañado de celebración.',
     'Sanar también es soltar la versión de ti que ya no necesitas.',
+    'No tienes que esperar a estar completamente bien para empezar a crecer.',
+    'Lo que aprendiste sobre ti en los momentos difíciles vale mucho.',
+    'No todo lo que se rompe queda roto para siempre.',
+    'Sanar también es aprender a pedirte menos perfección.',
+    'Lo que hoy sientes como limitación mañana puede ser profundidad.',
+    'Sanar también requiere creer que hay algo al otro lado.',
+    'No tienes que saber adónde vas para saber que estás avanzando.',
+    'Lo que superaste cambió permanentemente quién eres.',
   ],
   'crecimiento-buscando': [
     'Buscar ya es moverse. Y moverse ya es crecer.',
@@ -366,40 +353,40 @@ const MENSAJES: Record<string, string[]> = {
     'La búsqueda activa genera oportunidades que la pasividad no ve.',
     'No todo lo que no encuentras hoy está perdido.',
     'Buscar también es una forma de comprometerte contigo.',
-    'No toda búsqueda necesita testigos.',
     'La dirección importa más que la certeza sobre el destino.',
     'No tienes que estar seguro para buscar.',
     'Buscar bien requiere también saber qué no merece tu búsqueda.',
     'No toda pregunta sin respuesta es un fracaso.',
     'La búsqueda honesta siempre revela algo útil.',
-    'No tienes que tener todo claro para empezar a explorar.',
     'Buscar activamente es diferente a esperar pasivamente.',
     'No toda búsqueda es lineal. Los rodeos también enseñan.',
     'La pregunta correcta vale más que la respuesta equivocada.',
-    'No tienes que saber adónde vas para saber que estás en movimiento.',
     'Buscar también requiere tolerar la incertidumbre.',
     'No toda exploración termina en hallazgo. Pero siempre termina en aprendizaje.',
     'La búsqueda con propósito filtra lo que no sirve.',
-    'No tienes que encontrar hoy lo que buscas desde hace tiempo.',
     'Buscar desde la honestidad es buscar desde la fortaleza.',
-    'No toda búsqueda necesita ser grande para ser valiosa.',
     'La curiosidad activa es uno de los recursos más poderosos.',
-    'No tienes que tener el mapa completo para explorar.',
     'Buscar también es una declaración de que crees que hay algo mejor.',
     'No toda duda te paraliza. Algunas te mueven.',
     'La búsqueda consciente genera crecimiento aunque no encuentres lo que buscas.',
     'No tienes que saber exactamente qué quieres para saber qué no quieres.',
     'Buscar con intención es también respetarte.',
-    'No toda búsqueda tiene respuesta. Pero todas tienen valor.',
     'La exploración sin miedo es una ventaja enorme.',
     'No tienes que estar perdido para buscar algo mejor.',
     'Buscar también es confiar en que hay algo que encontrar.',
-    'No toda incertidumbre necesita resolverse rápido.',
     'La búsqueda también te entrena para cuando encuentres.',
-    'No tienes que saber todo para dar el siguiente paso en la búsqueda.',
     'Buscar activamente es diferente a estar insatisfecho.',
-    'No toda búsqueda exterior es realmente exterior.',
     'La exploración también requiere soltar lo que ya no sirve.',
+    'Buscar con determinación es ya una forma de crecer.',
+    'La incertidumbre de buscar es mejor que la certeza de no intentarlo.',
+    'Buscar bien es también saber cuándo parar y evaluar.',
+    'La búsqueda sin miedo abre puertas que el miedo mantiene cerradas.',
+    'Buscar también te da información sobre ti.',
+    'La exploración activa genera más oportunidades que la espera pasiva.',
+    'No tienes que tener todo resuelto para seguir explorando.',
+    'Buscar también es una forma de confiar en que hay algo que encontrar.',
+    'No toda búsqueda es sobre encontrar. Algunas son sobre descartarse.',
+    'La búsqueda de propósito también te revela quién quieres ser.',
   ],
   'crecimiento-disfrutando': [
     'Celebrar lo que ya tienes no frena el crecimiento. Lo alimenta.',
@@ -418,11 +405,9 @@ const MENSAJES: Record<string, string[]> = {
     'Lo que disfrutas hoy también te da energía para mañana.',
     'No toda ambición requiere tensión constante.',
     'Disfrutar el proceso también forma parte del resultado.',
-    'No tienes que estar siempre en modo construcción.',
     'Lo que has conseguido también merece ser celebrado, no solo superado.',
     'No toda pausa en el crecimiento es retroceso. Algunas son consolidación.',
     'Disfrutar de lo que has construido no te hace menos ambicioso.',
-    'No tienes que compararte con tu versión futura para valorar la actual.',
     'Lo que ya eres es también un logro.',
     'No toda alegría tiene que venir del siguiente paso.',
     'Disfrutar consciente del presente también alimenta el futuro.',
@@ -434,24 +419,26 @@ const MENSAJES: Record<string, string[]> = {
     'Lo que ya conseguiste también define quién eres.',
     'No toda satisfacción es señal de conformismo.',
     'Disfrutar el camino también es respetar el proceso.',
-    'No tienes que tener más para empezar a disfrutar más.',
     'Lo que celebras hoy te da energía para lo que construyes mañana.',
     'No toda alegría hay que ganarla. Algunas ya la tienes.',
     'Disfrutar sin culpa también es crecimiento.',
     'No tienes que sacrificar el presente en nombre del futuro.',
     'Lo que disfrutas en el proceso también es aprendizaje.',
-    'No toda satisfacción viene del logro. Algunas vienen del ser.',
     'Disfrutar también es una señal de que estás en el lugar correcto.',
-    'No tienes que esperar al resultado para disfrutar del trabajo.',
     'Lo que tienes hoy es también el fruto de decisiones pasadas.',
-    'No toda pausa para disfrutar frena el crecimiento.',
     'Disfrutar de lo que has construido es también motivación.',
     'No tienes que estar siempre en tensión para crecer.',
     'Lo que celebras también refuerza lo que quieres repetir.',
-    'No toda ambición necesita ir acompañada de insatisfacción.',
     'Disfrutar el presente también es confiar en el futuro.',
     'No tienes que llegar a ningún lado especial para estar bien ahora.',
     'Lo que disfrutas hoy también es lo que recuerdas mañana.',
+    'Disfrutar también requiere atención. No se da solo.',
+    'No tienes que posponer la vida en nombre del crecimiento.',
+    'Lo que ya eres ya vale. Lo que serás también.',
+    'Disfrutar también es parte del crecimiento.',
+    'No tienes que esperar a merecer el disfrute. Ya lo mereces.',
+    'Lo que tienes ahora también es suficiente para estar bien.',
+    'Disfrutar bien lo que hay también es una habilidad.',
   ],
   'conexion-construyendo': [
     'Lo que construyes con otros tiene más peso que lo que construyes solo.',
@@ -463,7 +450,6 @@ const MENSAJES: Record<string, string[]> = {
     'Las personas correctas aceleran lo que construyes.',
     'No toda ayuda recibida te hace menos.',
     'Construir con otros también te construye a ti.',
-    'No todo lo que construyes tiene que ser tuyo solo para ser valioso.',
     'Las relaciones también son infraestructura.',
     'No tienes que hacerlo todo tú para que sea tuyo.',
     'Construir con las personas correctas cambia el resultado.',
@@ -473,37 +459,38 @@ const MENSAJES: Record<string, string[]> = {
     'Construir con otros requiere también saber ceder.',
     'No toda diferencia de opinión frena. Algunas mejoran lo que construyes.',
     'Las personas que suman también hay que cuidarlas.',
-    'No todo lo que se construye en equipo es más lento.',
     'Construir relaciones sólidas es también construir futuro.',
     'No tienes que tener todo el conocimiento si tienes las personas correctas.',
     'Las conexiones correctas abren puertas que el esfuerzo solo no puede.',
-    'No toda vulnerabilidad al construir con otros es riesgo.',
     'Construir con confianza es construir más rápido.',
     'No tienes que demostrarte a ti mismo haciendo todo solo.',
     'Las mejores cosas que se construyen tienen más de una mente detrás.',
-    'No toda dependencia en otros es debilidad.',
     'Construir con personas que te desafían es construir mejor.',
     'No tienes que proteger cada idea. Compartir también construye.',
     'Las relaciones también se construyen. No aparecen solas.',
     'Construir también es saber a quién llamar.',
-    'No tienes que tener todo resuelto antes de involucrar a otros.',
     'Las personas que creen en lo que construyes también lo hacen crecer.',
     'No toda crítica de quien te rodea hay que ignorarla.',
     'Construir en comunidad genera más que construir en aislamiento.',
-    'No tienes que ser el único con la visión para que la visión avance.',
     'Las conexiones que cuidas también te cuidan.',
     'Construir con otros también te enseña sobre ti.',
-    'No tienes que hacer todo para merecer lo que construyes.',
     'Las personas correctas a tu lado cambian lo que es posible.',
     'No toda colaboración es igual. Elige bien con quién construyes.',
     'Construir relaciones también requiere inversión constante.',
     'Las conexiones que nutres también nutren lo que construyes.',
     'Construir con personas que complementan lo que no tienes es inteligencia.',
-    'No tienes que hacerlo perfecto para que quienes construyen contigo lo valoren.',
     'Las personas que aparecen en tu camino también son parte de lo que construyes.',
-    'No toda soledad en el proceso es señal de que algo va mal.',
     'Construir también requiere saber a quién dejar entrar.',
     'Las mejores construcciones tienen historia de colaboración detrás.',
+    'No toda soledad en el proceso es señal de que algo va mal.',
+    'Lo que construyes con otros dura más que lo que construyes solo.',
+    'Construir desde la confianza en otros también es construir desde la fortaleza.',
+    'Las personas que comparten tu visión también aceleran lo que construyes.',
+    'No toda dependencia de otros es debilidad. Algunas es sabiduría.',
+    'Construir también es aprender a delegar bien.',
+    'Las relaciones que construyes también son parte de tu legado.',
+    'No todo equipo funciona. Pero el correcto cambia todo.',
+    'Construir con intención también aplica a las relaciones que eliges.',
   ],
   'conexion-sanando': [
     'Dejarte ayudar también es un acto de valentía.',
@@ -515,7 +502,6 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar con apoyo es más rápido y más profundo.',
     'No tienes que proteger a todos de lo que sientes.',
     'Las personas que se quedan cuando estás mal son las que importan.',
-    'No toda soledad en el proceso de sanar es necesaria.',
     'Dejarte ver también es sanar.',
     'No tienes que tener todo resuelto antes de conectar.',
     'Las conversaciones honestas también sanan.',
@@ -523,7 +509,6 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también es aprender a recibir.',
     'No tienes que demostrar que estás bien para ser querido.',
     'Las relaciones que te permiten ser quien eres también sanan.',
-    'No toda ayuda hay que pagarla de inmediato.',
     'Sanar con otros cambia la calidad del proceso.',
     'No tienes que ser fuerte delante de todos.',
     'Las conexiones que cuidas también te cuidan cuando lo necesitas.',
@@ -531,31 +516,33 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también requiere dejarse querer.',
     'No tienes que cargar solo con todo para ser válido.',
     'Las personas que te ven en el proceso también forman parte de la sanación.',
-    'No toda conexión tiene que ser perfecta para ser valiosa.',
     'Sanar con la mirada de alguien que cree en ti acelera el proceso.',
     'No tienes que estar bien para conectar. Puedes conectar mientras sanas.',
     'Las relaciones que sobreviven a los momentos difíciles son las reales.',
-    'No toda soledad es elegida. Pero algunas sí se pueden cambiar.',
     'Sanar también es aprender qué personas te hacen bien.',
     'No tienes que justificar tu necesidad de apoyo.',
     'Las conversaciones que curan también son actos de amor.',
     'Sanar también es confiar en que hay personas que quieren ayudarte.',
-    'No tienes que haber perdido mucho para merecer apoyo.',
     'Las relaciones sanas también se construyen desde la vulnerabilidad.',
     'Sanar en comunidad es más sostenible que sanar en solitario.',
-    'No tienes que esperar a estar bien para conectar con quien te cuida.',
     'Las personas que te ven sanar también crecen contigo.',
     'Sanar también es redescubrir que no estás solo.',
     'No tienes que resolver todo antes de pedir ayuda.',
-    'Las conexiones que nutres en momentos buenos también están cuando los necesitas.',
     'Sanar también es aprender a confiar de nuevo.',
     'No tienes que cargar con todo para demostrar que puedes.',
     'Las personas correctas a tu lado hacen que el proceso duela menos.',
-    'No toda conexión que buscas en momentos difíciles es debilidad.',
     'Sanar también es permitirte ser visto sin filtros.',
     'No tienes que estar entero para conectar con alguien.',
     'Las personas que te aceptan en proceso también son las que importan.',
     'Sanar también pasa por reconocer quién está contigo de verdad.',
+    'No toda soledad en el proceso de sanar es necesaria.',
+    'Sanar también es recuperar la confianza en que mereces apoyo.',
+    'Las personas que se quedan cuando no tienes nada que dar también son reales.',
+    'No toda ayuda llega como esperabas. A veces llega mejor.',
+    'Sanar también es aprender a pedir lo que necesitas.',
+    'Las conexiones que nutres también te nutren cuando lo necesitas.',
+    'No toda conexión que buscas cuando estás mal es dependencia.',
+    'Sanar también es descubrir que no tienes que hacerlo todo solo.',
   ],
   'conexion-buscando': [
     'A veces lo que buscas ya está en una conversación que aún no tuviste.',
@@ -565,7 +552,6 @@ const MENSAJES: Record<string, string[]> = {
     'Preguntar también es una forma de conectar.',
     'No toda búsqueda necesita ser solitaria.',
     'Las personas correctas también te ayudan a encontrar lo que buscas.',
-    'No tienes que saber exactamente qué buscas para conectar.',
     'Buscar con otros multiplica las perspectivas.',
     'Las conversaciones correctas también revelan lo que buscas.',
     'No tienes que encontrar solo para que el hallazgo sea tuyo.',
@@ -588,26 +574,27 @@ const MENSAJES: Record<string, string[]> = {
     'Las relaciones que buscas también se alimentan de lo que das.',
     'Buscar también es estar presente en los lugares correctos.',
     'Las personas que te encuentran cuando buscas también tienen algo que enseñarte.',
-    'No tienes que buscar solo para encontrar algo que sea tuyo.',
-    'Buscar conexión también es declarar que crees en los demás.',
-    'Las conversaciones que buscas también te cambian.',
     'Buscar también implica estar dispuesto a que te sorprendan.',
     'Las personas que aparecen cuando buscas no siempre son las que buscabas.',
-    'No tienes que saber adónde vas para conectar con quien va en tu dirección.',
     'Buscar también es una forma de confiar en que hay algo que encontrar.',
     'No toda conexión que buscas está en los lugares que conoces.',
     'Buscar con otros también te hace más visible para lo que buscas.',
-    'Las personas que conectan contigo cuando buscas también buscan algo.',
-    'No tienes que tener todo claro para buscar conexión.',
-    'Buscar con otros también multiplica lo que puedes encontrar.',
     'Las conversaciones que no planeas también son parte de la búsqueda.',
-    'No toda búsqueda de conexión es necesidad. Algunas son sabiduría.',
     'Buscar junto a otros también acelera lo que encuentras.',
     'Las personas que te rodean también son parte de lo que buscas.',
     'No tienes que buscar en silencio si hay alguien que puede ayudarte.',
     'Buscar también es confiar en que lo que encuentres valdrá la pena.',
     'Las conexiones que haces mientras buscas también son hallazgos.',
     'No toda búsqueda solitaria es la más efectiva.',
+    'Buscar con otros también multiplica lo que puedes encontrar.',
+    'Las conversaciones que buscas también te cambian.',
+    'Buscar también implica estar dispuesto a cambiar lo que buscas.',
+    'Las personas que conectan contigo cuando buscas también buscan algo.',
+    'No tienes que tener todo claro para buscar conexión.',
+    'Buscar con otros también te da perspectivas que solo no tendrías.',
+    'Las personas que te acompañan en la búsqueda también son parte del hallazgo.',
+    'No toda búsqueda de conexión necesita estrategia.',
+    'Buscar también es declarar que crees que hay algo mejor.',
   ],
   'conexion-disfrutando': [
     'Los momentos con las personas correctas no se recuperan. Están ahora.',
@@ -631,35 +618,35 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que esperar a tener tiempo para estar presente.',
     'Los momentos de conexión real también recargan.',
     'Disfrutar con quien quieres también es una elección.',
-    'No tienes que tener todo resuelto para disfrutar de quien tienes.',
     'Las conversaciones que te hacen bien también son combustible.',
     'Disfrutar del presente con quien importa es también futuro.',
     'Las personas con las que ríes también te cuidan sin que lo notes.',
     'Disfrutar de lo que tienes, con quien tienes, es suficiente.',
-    'No tienes que esperar a que todo esté bien para estar bien con quien quieres.',
     'Los momentos de conexión real compensan muchos momentos difíciles.',
     'Disfrutar con otros también te recuerda que no estás solo.',
     'Las personas que disfrutas también merecen tu atención real.',
     'Disfrutar también es estar disponible para quienes quieres.',
     'Las conexiones que cuidas también son las que más disfrutas.',
     'Disfrutar de las personas que tienes también es invertir en ti.',
-    'No tienes que tener mucho para disfrutar mucho con quien quieres.',
     'Los momentos sencillos con personas reales son los más valiosos.',
-    'No toda alegría compartida necesita futuro para tener valor hoy.',
     'Disfrutar con quien quieres también es una forma de agradecerles.',
     'Los mejores momentos raramente se planifican. Se reconocen.',
     'Disfrutar juntos también construye.',
-    'No toda conexión que disfrutas necesita palabras.',
     'Las personas que te hacen sentir bien también merecen que se lo digas.',
     'Disfrutar también es elegir con quién pasas el tiempo.',
-    'No todo momento con otros necesita propósito para tener valor.',
     'Las conexiones que celebras también se fortalecen.',
     'Disfrutar con otros también es una forma de cuidar esas relaciones.',
-    'No toda alegría compartida hay que guardarla. Algunas hay que expresarlas.',
     'Las personas que te acompañan en los momentos buenos también importan.',
     'Disfrutar del presente con quien quieres también es una decisión.',
     'No tienes que ir a ningún lado especial para tener los mejores momentos.',
     'Las conexiones reales también se disfrutan en lo cotidiano.',
+    'No toda alegría compartida necesita futuro para tener valor hoy.',
+    'Disfrutar también es una señal de que estás en el lugar correcto.',
+    'Los momentos con quienes quieres son los que más recuerdas.',
+    'Disfrutar también requiere presencia real, no solo física.',
+    'Las personas que están contigo en los momentos buenos también importan.',
+    'No toda conexión que disfrutas necesita análisis.',
+    'Disfrutar con otros también te da energía para lo que viene.',
   ],
   'proposito-construyendo': [
     'Lo que haces tiene sentido aunque todavía no veas el cuadro completo.',
@@ -681,7 +668,6 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que convencer a todos de tu propósito para que sea válido.',
     'Construir con intención también genera más energía que construir por inercia.',
     'El propósito también se refina con el tiempo y la experiencia.',
-    'No tienes que tener certeza total sobre tu propósito para actuar.',
     'Construir también es descubrir para qué sirve lo que estás construyendo.',
     'El sentido que le das a lo que construyes también lo hace más sólido.',
     'Construir con propósito también requiere revisar si el propósito sigue siendo tuyo.',
@@ -700,18 +686,19 @@ const MENSAJES: Record<string, string[]> = {
     'No todo lo que construyes tiene que tener impacto masivo para tener sentido.',
     'El propósito claro hace más fácil decir que no a lo que no encaja.',
     'Construir con sentido también te da más energía para los días difíciles.',
-    'No toda construcción con propósito es visible desde fuera.',
     'El sentido también se encuentra en el proceso, no solo en el resultado.',
     'Construir con propósito también requiere honestidad sobre lo que realmente quieres.',
-    'No tienes que tener el propósito más original para que sea valioso.',
     'El propósito también se fortalece cada vez que actúas en coherencia con él.',
     'Construir con sentido también es más sostenible a largo plazo.',
+    'El para qué también es lo que te sostiene cuando el cómo se complica.',
+    'Construir con propósito claro también te hace más resiliente.',
     'No toda dificultad en el camino invalida el propósito.',
     'El propósito también requiere ser revisado cuando las circunstancias cambian.',
     'Construir con intención también genera más satisfacción en el proceso.',
-    'No tienes que tener el propósito perfecto para empezar a construir con sentido.',
-    'El para qué también es lo que te sostiene cuando el cómo se complica.',
-    'Construir con propósito claro también te hace más resiliente.',
+    'El propósito también vive en cómo tratas lo que ya tienes.',
+    'Construir también es una declaración de en qué crees.',
+    'No toda construcción tiene sentido desde el inicio. Algunas lo van encontrando.',
+    'El propósito también se expresa en lo que decides no construir.',
   ],
   'proposito-sanando': [
     'Lo que viviste no fue en vano si lo conviertes en dirección.',
@@ -726,7 +713,6 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también es recuperar la conexión con lo que te importa.',
     'No toda pérdida te aleja del propósito. Algunas te acercan.',
     'Lo que viviste también amplió tu capacidad de ayudar a otros.',
-    'No tienes que estar completamente bien para empezar a vivir con propósito.',
     'Sanar también es recuperar la energía para lo que importa.',
     'Lo que te costó llegar hasta aquí también es parte de tu propósito.',
     'Sanar también es descubrir que tienes algo que ofrecer.',
@@ -744,26 +730,27 @@ const MENSAJES: Record<string, string[]> = {
     'Sanar también es descubrir que el dolor también puede tener dirección.',
     'Lo que has superado también es evidencia de que puedes superar lo que viene.',
     'Sanar con propósito es convertir la experiencia en recurso.',
-    'No tienes que convertir todo el dolor en propósito. Pero puedes elegir.',
-    'Sanar también es reconectar con lo que quieres construir.',
-    'Lo que viviste también te dio herramientas que otros no tienen.',
     'Sanar también es recuperar la capacidad de confiar en el futuro.',
-    'No tienes que tener todo sanado para empezar a construir sentido.',
     'Lo que superaste cambió permanentemente quién eres.',
     'Sanar también pasa por reconocer el valor de lo que ya recorriste.',
-    'No toda herida necesita ser el centro de tu historia.',
     'Lo que viviste también puede ser combustible, no solo peso.',
     'Sanar también es aprender que mereces estar bien y hacer algo con ello.',
-    'No tienes que esperar a estar completamente bien para empezar.',
     'Lo que te costó también te enseñó lo que vale la pena.',
     'Sanar también es encontrar qué quieres proteger a partir de ahora.',
-    'No toda experiencia difícil carece de sentido.',
     'Lo que has superado también define lo que puedes ofrecer.',
     'Sanar también es redescubrir qué te mueve de verdad.',
     'No tienes que haber tenido un origen fácil para tener un destino significativo.',
     'Lo que viviste también amplió tu capacidad de entender lo esencial.',
     'Sanar también es recuperar las ganas de construir algo.',
     'No toda herida necesita explicación para generar propósito.',
+    'Lo que viviste también te dio herramientas que otros no tienen.',
+    'Sanar también es recuperar la confianza en tu propia voz.',
+    'No toda experiencia difícil carece de sentido.',
+    'Lo que has superado también define lo que ya no te asusta.',
+    'Sanar también es aprender a ver tu historia sin vergüenza.',
+    'No tienes que convertir todo el dolor en propósito. Pero puedes elegir.',
+    'Lo que viviste también es parte de tu capacidad de entender a otros.',
+    'Sanar también es recuperar la curiosidad por lo que viene.',
   ],
   'proposito-buscando': [
     'El propósito no siempre llega claro. A veces es solo una dirección.',
@@ -789,7 +776,6 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que tener el propósito definitivo para vivir con más intención hoy.',
     'La búsqueda de sentido también requiere honestidad sobre qué te mueve realmente.',
     'Buscar el para qué también requiere paciencia con uno mismo.',
-    'No tienes que encontrar el propósito de vida para vivir con propósito hoy.',
     'La búsqueda de sentido también es una forma de respetarte.',
     'Buscar el para qué también requiere estar dispuesto a cambiar.',
     'La búsqueda de sentido también genera energía cuando la encuentras.',
@@ -801,21 +787,22 @@ const MENSAJES: Record<string, string[]> = {
     'No tienes que tener el propósito perfecto para empezar a actuar con sentido.',
     'Buscar también requiere saber qué no vale la pena buscar.',
     'La búsqueda de propósito también requiere revisar qué das por hecho.',
-    'No toda duda sobre el propósito es señal de que vas mal.',
     'Buscar el para qué con honestidad también requiere valentía.',
     'La búsqueda consciente de sentido también te da más claridad en lo cotidiano.',
     'No tienes que saber el destino para saber qué dirección tiene más sentido.',
     'Buscar propósito también es buscar coherencia entre lo que haces y lo que valoras.',
     'La búsqueda de sentido también requiere tiempo sin ruido.',
-    'No toda búsqueda de propósito necesita dramatismo.',
     'Buscar el para qué también requiere escuchar lo que no te atreves a decirte.',
     'La búsqueda de propósito también te conecta con lo esencial.',
-    'No tienes que tener todo bajo control para buscar propósito.',
     'Buscar sentido también requiere confiar en que hay algo que encontrar.',
     'La búsqueda honesta de propósito también genera movimiento.',
-    'No toda incertidumbre sobre el propósito es vacío. Algunas es espacio.',
     'Buscar el para qué también es lo más humano que puedes hacer.',
     'La búsqueda de propósito también te revela quién quieres ser.',
+    'No toda duda sobre el propósito es señal de que vas mal.',
+    'Buscar el para qué sin prisa es buscar con más profundidad.',
+    'La búsqueda de sentido también requiere soltar las respuestas que ya no encajan.',
+    'Buscar propósito también es una forma de comprometerte contigo.',
+    'No toda incertidumbre sobre el propósito es vacío. Algunas es espacio.',
   ],
   'proposito-disfrutando': [
     'Vivir bien también es un propósito. No lo subestimes.',
@@ -978,70 +965,126 @@ export default function Home() {
   const q = PREGUNTAS[paso]
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-[#f5f0ea] px-6 py-10">
-      <div className="w-full max-w-md text-center">
+    <main style={{ background: '#00000c', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem', fontFamily: "'Inner Tight', sans-serif" }}>
+      <div style={{ width: '100%', maxWidth: '420px', textAlign: 'center' }}>
+
+        {/* BIENVENIDA */}
         {pantalla === 'bienvenida' && (
-          <div className="flex flex-col items-center gap-6">
-            <div className="text-5xl animate-bounce">🏺</div>
-            <h1 className="font-serif-custom text-4xl font-light text-[#3a3028]">Hola.</h1>
-            <p className="text-sm text-[#9a8878] leading-relaxed tracking-wide">
-              Antes de hablarte, quiero conocerte.<br />Unas preguntas. Sin trampa.
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
+            {/* Logo SVG Pepper */}
+            <svg viewBox="0 0 320 80" width="220" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="68" fontFamily="'Arial Black', sans-serif" fontWeight="900" fontSize="72" fill="#ed0000" letterSpacing="-2">PEPPER.</text>
+            </svg>
+            <p style={{ color: '#f2f0e6', fontSize: '0.9rem', lineHeight: '1.7', letterSpacing: '0.03em', fontFamily: "'Libre Baskerville', serif", opacity: 0.8 }}>
+              Antes de hablarte,<br />quiero conocerte.
             </p>
-            <button onClick={() => setPantalla('preguntas')}
-              className="mt-2 border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+            <button onClick={() => setPantalla('preguntas')} style={{
+              background: '#ed0000', border: 'none', color: '#ffffff',
+              padding: '0.85rem 2.5rem', fontSize: '0.7rem', letterSpacing: '0.25em',
+              textTransform: 'uppercase', cursor: 'pointer', fontFamily: "'Inner Tight', sans-serif",
+              fontWeight: 700
+            }}>
               Vamos
             </button>
           </div>
         )}
+
+        {/* PREGUNTAS */}
         {pantalla === 'preguntas' && (
-          <div className="flex flex-col items-center gap-6">
-            <div className="flex gap-2">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.75rem' }}>
+            {/* Progreso */}
+            <div style={{ display: 'flex', gap: '6px' }}>
               {PREGUNTAS.map((_, i) => (
-                <div key={i} className={`w-2 h-2 rounded-full transition-all ${i < paso ? 'bg-[#c4ad98]' : 'bg-[#e0d5ca]'}`} />
+                <div key={i} style={{ width: '8px', height: '8px', borderRadius: '50%', background: i < paso ? '#ed0000' : '#333' }} />
               ))}
             </div>
-            <p className="font-serif-custom text-2xl font-light text-[#3a3028] leading-relaxed min-h-[60px]">{q.texto}</p>
+
+            <p style={{ color: '#f2f0e6', fontSize: '1.4rem', fontFamily: "'Libre Baskerville', serif", fontWeight: 400, lineHeight: 1.5, minHeight: '60px' }}>
+              {q.texto}
+            </p>
+
             {q.tipo === 'texto' ? (
-              <input autoFocus value={nombreInput} onChange={e => setNombreInput(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && siguiente()} placeholder={q.placeholder}
-                className="w-full border-b border-[#c4ad98] bg-transparent font-serif-custom text-2xl text-[#3a3028] text-center pb-2 outline-none placeholder-[#c4ad98]" />
+              <input autoFocus value={nombreInput}
+                onChange={e => setNombreInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && siguiente()}
+                placeholder={q.placeholder}
+                style={{
+                  width: '100%', background: 'none', border: 'none', borderBottom: '1px solid #ed0000',
+                  color: '#f2f0e6', fontSize: '1.4rem', textAlign: 'center', padding: '0.5rem',
+                  outline: 'none', fontFamily: "'Libre Baskerville', serif"
+                }}
+              />
             ) : (
-              <div className="flex flex-col gap-3 w-full">
-                {q.ops!.map(op => (
-                  <button key={op} onClick={() => toggleOpcion(q.id, op)}
-                    className={`border px-6 py-3 rounded-full text-sm tracking-wide text-left transition-all ${
-                      (respuestas[q.id] || []).includes(op)
-                        ? 'bg-[#c4ad98] border-[#c4ad98] text-[#f5f0ea]'
-                        : 'border-[#d9cec5] text-[#5a4a3a] hover:bg-[#e8ddd5]'}`}>
-                    {op}
-                  </button>
-                ))}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', width: '100%' }}>
+                {q.ops!.map(op => {
+                  const sel = (respuestas[q.id] || []).includes(op)
+                  return (
+                    <button key={op} onClick={() => toggleOpcion(q.id, op)} style={{
+                      background: sel ? '#ed0000' : 'transparent',
+                      border: `1px solid ${sel ? '#ed0000' : '#333'}`,
+                      color: sel ? '#ffffff' : '#f2f0e6',
+                      padding: '0.75rem 1.25rem', fontSize: '0.8rem', letterSpacing: '0.05em',
+                      textAlign: 'left', cursor: 'pointer', transition: 'all 0.2s',
+                      fontFamily: "'Inner Tight', sans-serif"
+                    }}>
+                      {op}
+                    </button>
+                  )
+                })}
               </div>
             )}
-            <button onClick={siguiente}
-              className="border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+
+            <button onClick={siguiente} style={{
+              background: 'transparent', border: '1px solid #ed0000', color: '#ed0000',
+              padding: '0.75rem 2.5rem', fontSize: '0.7rem', letterSpacing: '0.25em',
+              textTransform: 'uppercase', cursor: 'pointer', fontFamily: "'Inner Tight', sans-serif",
+              fontWeight: 700, marginTop: '0.5rem'
+            }}>
               Continuar
             </button>
           </div>
         )}
+
+        {/* MENSAJE */}
         {pantalla === 'mensaje' && (
-          <div className="flex flex-col items-center gap-6">
-            <div className="text-5xl">🏺</div>
-            <p className="text-xs tracking-widest text-[#9a8878] uppercase">{perfil?.nombre}.</p>
-            <p className={`font-serif-custom text-2xl font-light italic text-[#3a3028] leading-relaxed transition-opacity duration-1000 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.75rem' }}>
+            <svg viewBox="0 0 320 80" width="160" xmlns="http://www.w3.org/2000/svg">
+              <text x="10" y="68" fontFamily="'Arial Black', sans-serif" fontWeight="900" fontSize="72" fill="#ed0000" letterSpacing="-2">PEPPER.</text>
+            </svg>
+
+            <p style={{ color: '#9d0000', fontSize: '0.65rem', letterSpacing: '0.25em', textTransform: 'uppercase', fontFamily: "'Inner Tight', sans-serif" }}>
+              {perfil?.nombre}
+            </p>
+
+            <p style={{
+              color: '#f2f0e6', fontSize: '1.35rem', fontFamily: "'Libre Baskerville', serif",
+              fontStyle: 'italic', lineHeight: 1.7, opacity: visible ? 1 : 0,
+              transition: 'opacity 1.2s ease', minHeight: '80px'
+            }}>
               {mensaje}
             </p>
-            <div className="w-10 h-px bg-[#c4ad98]" />
-            <button onClick={nuevoMensaje}
-              className="border border-[#c4ad98] text-[#7a6a5a] px-8 py-3 rounded-full text-xs tracking-widest uppercase hover:bg-[#c4ad98] hover:text-[#f5f0ea] transition-all">
+
+            <div style={{ width: '32px', height: '1px', background: '#ed0000' }} />
+
+            <button onClick={nuevoMensaje} style={{
+              background: 'transparent', border: '1px solid #333', color: '#f2f0e6',
+              padding: '0.75rem 2.5rem', fontSize: '0.7rem', letterSpacing: '0.25em',
+              textTransform: 'uppercase', cursor: 'pointer', fontFamily: "'Inner Tight', sans-serif",
+              fontWeight: 700
+            }}>
               Otra
             </button>
-            <p className="text-xs text-[#c4ad98] tracking-wide mt-4">— Pepper Society</p>
-            <button onClick={resetear} className="text-xs text-[#c4ad98] underline bg-none border-none cursor-pointer">
+
+            <button onClick={resetear} style={{
+              background: 'none', border: 'none', color: '#333', fontSize: '0.65rem',
+              letterSpacing: '0.1em', cursor: 'pointer', marginTop: '1rem',
+              fontFamily: "'Inner Tight', sans-serif", textDecoration: 'underline'
+            }}>
               Empezar de nuevo
             </button>
           </div>
         )}
+
       </div>
     </main>
   )
