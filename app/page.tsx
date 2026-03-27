@@ -880,6 +880,9 @@ const MENSAJES: Record<string, string[]> = {
   ],
 }
 
+const HISTORIAL_KEY = 'pepper_historial'
+const MAX_HISTORIAL = 15
+
 function getMensaje(busqueda: string, momento: string): string {
   const b = busqueda.toLowerCase()
   const m = momento.toLowerCase()
@@ -892,9 +895,27 @@ function getMensaje(busqueda: string, momento: string): string {
   if (m.includes('sanando')) mKey = 'sanando'
   else if (m.includes('buscando')) mKey = 'buscando'
   else if (m.includes('disfrutando')) mKey = 'disfrutando'
+
   const key = `${bKey}-${mKey}`
   const lista = MENSAJES[key] || MENSAJES['default']
-  return lista[Math.floor(Math.random() * lista.length)]
+
+  // Cargar historial
+  let historial: string[] = []
+  try { historial = JSON.parse(localStorage.getItem(HISTORIAL_KEY) || '[]') } catch {}
+
+  // Filtrar frases que no han salido recientemente
+  const disponibles = lista.filter(f => !historial.includes(f))
+  const pool = disponibles.length > 0 ? disponibles : lista
+
+  // Elegir aleatoriamente del pool disponible
+  const elegida = pool[Math.floor(Math.random() * pool.length)]
+
+  // Guardar en historial
+  historial.push(elegida)
+  if (historial.length > MAX_HISTORIAL) historial = historial.slice(-MAX_HISTORIAL)
+  try { localStorage.setItem(HISTORIAL_KEY, JSON.stringify(historial)) } catch {}
+
+  return elegida
 }
 
 type Perfil = { nombre: string; personalidad: string; busqueda: string; momento: string; tono: string }
@@ -958,6 +979,7 @@ export default function Home() {
   const resetear = () => {
     if (!confirm('¿Seguro que quieres empezar de nuevo?')) return
     localStorage.removeItem(STORAGE_KEY)
+    localStorage.removeItem(HISTORIAL_KEY)
     setPerfil(null); setPaso(0); setRespuestas({}); setNombreInput(''); setVisible(false)
     setPantalla('bienvenida')
   }
