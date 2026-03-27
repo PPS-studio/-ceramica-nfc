@@ -1066,15 +1066,6 @@ export default function Home() {
 
             <div style={{ width: '32px', height: '1px', background: '#ed0000' }} />
 
-            <button onClick={nuevoMensaje} style={{
-              background: 'transparent', border: '1px solid #333', color: '#f2f0e6',
-              padding: '0.75rem 2.5rem', fontSize: '0.7rem', letterSpacing: '0.25em',
-              textTransform: 'uppercase', cursor: 'pointer', fontFamily: "'Inner Tight', sans-serif",
-              fontWeight: 700
-            }}>
-              Otra
-            </button>
-
             <button onClick={resetear} style={{
               background: 'none', border: 'none', color: '#333', fontSize: '0.65rem',
               letterSpacing: '0.1em', cursor: 'pointer', marginTop: '1rem',
